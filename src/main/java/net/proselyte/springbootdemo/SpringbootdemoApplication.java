@@ -13,8 +13,12 @@ import java.util.Optional;
 @SpringBootApplication
 public class SpringbootdemoApplication {
 
+	private final UserRepository userRepository;
+
 	@Autowired
-	UserRepository userRepository;
+	public SpringbootdemoApplication(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootdemoApplication.class, args);
