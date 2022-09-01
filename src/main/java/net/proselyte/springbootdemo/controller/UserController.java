@@ -25,7 +25,7 @@ public class UserController {
 
     @GetMapping("/")
     public String greeting() {
-        return "greeting.html";
+        return "redirect:/login";
     }
 
     @GetMapping("/user/userPage")
